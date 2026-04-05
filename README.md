@@ -1,3 +1,23 @@
+---
+title: Supply Chain Auditor Env
+emoji: ⚡
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+app_port: 7860
+---
+
+---
+title: Supply Chain Auditor Env
+emoji: $([char]0x1F6E1)
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+app_port: 7860
+---
+
 # Supply Chain Auditor Env
 
 ## 1. Overview & Motivation
@@ -127,3 +147,5 @@ Current workspace baseline was generated from reproducible local runs using Open
 - Deployment URL: `TBD`
 - Ensure Space is tagged with `openenv`
 - Ensure Space status is `Running` before submission
+
+
