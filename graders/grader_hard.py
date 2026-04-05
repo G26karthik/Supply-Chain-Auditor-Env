@@ -102,7 +102,10 @@ class HardGrader:
 		remediation_validity = _clamp01(0.7 * coverage + 0.3 * quality)
 
 		actual_upgrades = len({entry.package_name for entry in state.remediations})
-		if actual_upgrades <= self.minimum_upgrades:
+		# Parsimony only counts if at least one valid remediation is provided
+		if actual_upgrades == 0:
+			parsimony = 0.0
+		elif actual_upgrades <= self.minimum_upgrades:
 			parsimony = 1.0
 		else:
 			extra_upgrades = actual_upgrades - self.minimum_upgrades

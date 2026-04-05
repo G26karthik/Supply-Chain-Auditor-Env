@@ -10,9 +10,9 @@ from env.models import Action, Observation
 
 
 app = create_app(
-	env_class=SupplyChainEnv,
-	action_model=Action,
-	observation_model=Observation,
+	env=SupplyChainEnv,
+	action_cls=Action,
+	observation_cls=Observation,
 	env_name="SupplyChainAuditor",
 	max_concurrent_envs=10,
 )

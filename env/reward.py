@@ -11,15 +11,21 @@ REWARD_TABLE: dict[str, float] = {
 	"correct_cve_flagged": 0.12,
 	"typosquat_detected": 0.18,
 	"transitive_dep_traced": 0.08,
-	"false_positive_flag": 0.00,
+	"false_positive_flag": -0.08,
 	"valid_remediation": 0.08,
-	"invalid_remediation": 0.00,
+	"invalid_remediation": -0.05,
 	"sbom_generated": 0.05,
-	"redundant_action": 0.00,
-	"step_penalty": 0.00,
+	"redundant_action": -0.02,
+	"step_penalty": -0.01,
 	"report_submitted_complete": 0.20,
 	"report_submitted_partial": 0.10,
 }
+
+
+def clamp(value: float, min_val: float = -1.0, max_val: float = 1.0) -> float:
+	"""Clamp numeric value into [min_val, max_val]."""
+
+	return max(min_val, min(max_val, value))
 
 
 def clamp01(value: float) -> float:
@@ -48,9 +54,9 @@ class RewardEngine:
 		delta = self.reward_table.get(event, 0.0)
 		updated_cumulative = clamp01(cumulative_reward + delta)
 
-		# Step rewards are also bounded to [0, 1] for strict schema compliance.
+		# Step rewards are bounded to [-1, 1] per spec.
 		step_reward = Reward(
-			value=clamp01(delta),
+			value=clamp(delta, -1.0, 1.0),
 			reason=reason or event,
 		)
 		return RewardResult(reward=step_reward, cumulative_reward=updated_cumulative)

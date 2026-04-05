@@ -100,9 +100,9 @@ class Observation(OpenEnvObservation):
 
 
 class Reward(BaseModel):
-	"""Step reward bounded to [0.0, 1.0] per hackathon constraints."""
+	"""Step reward bounded to [-1.0, 1.0] per hackathon constraints."""
 
-	value: float = Field(ge=0.0, le=1.0)
+	value: float = Field(ge=-1.0, le=1.0)
 	reason: str
 
 

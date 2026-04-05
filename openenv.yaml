@@ -7,13 +7,77 @@ port: 7860
 description: >
   An agent environment where an AI security engineer audits Python package
   dependency trees for CVEs, typosquatting, and supply chain risks, then
-  generates a prioritized remediation plan.
+  generates a prioritized remediation plan. Features deterministic grading,
+  realistic fixture data with real CVE IDs, and three difficulty tiers from
+  flat manifest audits to full SBOM generation with remediation planning.
 tags:
   - openenv
   - security
   - software-supply-chain
   - real-world
 author: G. Karthik Koundinya
+action_space:
+  type: object
+  properties:
+    action_type:
+      type: string
+      enum:
+        - inspect_package
+        - check_cve
+        - trace_deps
+        - flag_package
+        - unflag_package
+        - generate_sbom
+        - remediate
+        - submit_report
+    package_name:
+      type: string
+    version:
+      type: string
+    depth:
+      type: integer
+      minimum: 1
+      maximum: 5
+    reason:
+      type: string
+    target_version:
+      type: string
+    report:
+      type: object
+observation_space:
+  type: object
+  properties:
+    task_id:
+      type: string
+    step:
+      type: integer
+    max_steps:
+      type: integer
+    requirements:
+      type: array
+      items:
+        type: string
+    objective:
+      type: string
+    last_action_result:
+      type: object
+    flags:
+      type: array
+    remediations:
+      type: array
+    sbom:
+      type: array
+    message:
+      type: string
+    done:
+      type: boolean
+    reward:
+      type: number
+    score:
+      type: number
+reward_range:
+  - -1.0
+  - 1.0
 tasks:
   - id: flat_audit
     name: Flat Dependency Audit

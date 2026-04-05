@@ -1,21 +1,13 @@
 ---
 title: Supply Chain Auditor Env
-emoji: ⚡
+emoji: 🛡️
 colorFrom: blue
 colorTo: indigo
 sdk: docker
 pinned: false
 app_port: 7860
----
-
----
-title: Supply Chain Auditor Env
-emoji: $([char]0x1F6E1)
-colorFrom: blue
-colorTo: indigo
-sdk: docker
-pinned: false
-app_port: 7860
+tags:
+  - openenv
 ---
 
 # Supply Chain Auditor Env
@@ -84,16 +76,16 @@ This environment models that real workflow as an OpenEnv-compatible benchmark. A
 | `correct_cve_flagged` | +0.12 |
 | `typosquat_detected` | +0.18 |
 | `transitive_dep_traced` | +0.08 |
-| `false_positive_flag` | +0.00 |
+| `false_positive_flag` | -0.08 |
 | `valid_remediation` | +0.08 |
-| `invalid_remediation` | +0.00 |
+| `invalid_remediation` | -0.05 |
 | `sbom_generated` | +0.05 |
-| `redundant_action` | +0.00 |
-| `step_penalty` | +0.00 |
+| `redundant_action` | -0.02 |
+| `step_penalty` | -0.01 |
 | `report_submitted_complete` | +0.20 |
 | `report_submitted_partial` | +0.10 |
 
-All rewards and cumulative reward state are clamped to `[0.0, 1.0]`.
+Step rewards are in `[-1.0, 1.0]`. Cumulative reward state is clamped to `[0.0, 1.0]`.
 
 ## 5. Setup & Usage
 
@@ -144,8 +136,14 @@ Current workspace baseline was generated from reproducible local runs using Open
 
 ## 7. Hugging Face Space
 
-- Deployment URL: `TBD`
-- Ensure Space is tagged with `openenv`
-- Ensure Space status is `Running` before submission
+- **Deployment URL:** [https://huggingface.co/spaces/YOUR_USERNAME/supply-chain-auditor-env](https://huggingface.co/spaces/YOUR_USERNAME/supply-chain-auditor-env)
+- Space is tagged with `openenv` via README frontmatter
+- After pushing to HF Spaces, verify the Space status shows `Running`
 
+### Deployment Steps
+
+1. Create a new Space on HuggingFace with Docker SDK
+2. Push this repository to the Space
+3. Wait for the build to complete
+4. Verify `/health` endpoint returns `{"status": "healthy"}`
 
