@@ -1,0 +1,14 @@
+{
+	"requets": {
+		"mimics": "requests",
+		"risk": "credential harvesting"
+	},
+	"urllib4": {
+		"mimics": "urllib3",
+		"risk": "backdoor"
+	},
+	"pydantics": {
+		"mimics": "pydantic",
+		"risk": "data exfiltration"
+	}
+}

@@ -1,0 +1,804 @@
+{
+	"requests": {
+		"2.28.0": {
+			"description": "HTTP library for Python.",
+			"author": "Kenneth Reitz",
+			"license": "Apache-2.0",
+			"published_at": "2022-06-09",
+			"direct_deps": [
+				"urllib3==1.26.12",
+				"certifi==2022.6.15",
+				"charset-normalizer==2.0.12",
+				"idna==3.3"
+			]
+		},
+		"2.31.0": {
+			"description": "HTTP library for Python.",
+			"author": "Kenneth Reitz",
+			"license": "Apache-2.0",
+			"published_at": "2023-05-22",
+			"direct_deps": [
+				"urllib3==2.0.4",
+				"certifi==2023.7.22",
+				"charset-normalizer==3.1.0",
+				"idna==3.4"
+			]
+		}
+	},
+	"urllib3": {
+		"1.26.12": {
+			"description": "HTTP client for Python.",
+			"author": "urllib3 contributors",
+			"license": "MIT",
+			"published_at": "2022-09-07",
+			"direct_deps": []
+		},
+		"2.0.0": {
+			"description": "HTTP client for Python.",
+			"author": "urllib3 contributors",
+			"license": "MIT",
+			"published_at": "2023-04-26",
+			"direct_deps": []
+		},
+		"2.0.4": {
+			"description": "HTTP client for Python.",
+			"author": "urllib3 contributors",
+			"license": "MIT",
+			"published_at": "2023-08-10",
+			"direct_deps": []
+		}
+	},
+	"certifi": {
+		"2022.6.15": {
+			"description": "Python package for providing Mozilla's CA bundle.",
+			"author": "Kenneth Reitz",
+			"license": "MPL-2.0",
+			"published_at": "2022-06-15",
+			"direct_deps": []
+		},
+		"2023.7.22": {
+			"description": "Python package for providing Mozilla's CA bundle.",
+			"author": "certifi maintainers",
+			"license": "MPL-2.0",
+			"published_at": "2023-07-22",
+			"direct_deps": []
+		}
+	},
+	"idna": {
+		"3.3": {
+			"description": "Internationalized Domain Names in Applications.",
+			"author": "idna maintainers",
+			"license": "BSD-3-Clause",
+			"published_at": "2021-11-19",
+			"direct_deps": []
+		},
+		"3.4": {
+			"description": "Internationalized Domain Names in Applications.",
+			"author": "idna maintainers",
+			"license": "BSD-3-Clause",
+			"published_at": "2023-04-12",
+			"direct_deps": []
+		}
+	},
+	"charset-normalizer": {
+		"2.0.12": {
+			"description": "Character encoding detector for Python.",
+			"author": "Ousret",
+			"license": "MIT",
+			"published_at": "2022-03-15",
+			"direct_deps": []
+		},
+		"3.1.0": {
+			"description": "Character encoding detector for Python.",
+			"author": "charset-normalizer maintainers",
+			"license": "MIT",
+			"published_at": "2023-03-05",
+			"direct_deps": []
+		}
+	},
+	"flask": {
+		"2.3.0": {
+			"description": "Micro web framework for Python.",
+			"author": "Pallets",
+			"license": "BSD-3-Clause",
+			"published_at": "2023-04-25",
+			"direct_deps": [
+				"werkzeug==2.3.0",
+				"jinja2==3.0.3",
+				"click==8.1.0",
+				"itsdangerous==2.1.2"
+			]
+		},
+		"3.0.0": {
+			"description": "Micro web framework for Python.",
+			"author": "Pallets",
+			"license": "BSD-3-Clause",
+			"published_at": "2023-09-30",
+			"direct_deps": [
+				"werkzeug==3.0.1",
+				"jinja2==3.1.2",
+				"click==8.1.7",
+				"itsdangerous==2.1.2"
+			]
+		}
+	},
+	"werkzeug": {
+		"2.3.0": {
+			"description": "WSGI utility library for Python.",
+			"author": "Pallets",
+			"license": "BSD-3-Clause",
+			"published_at": "2023-04-25",
+			"direct_deps": [
+				"markupsafe==2.0.0"
+			]
+		},
+		"3.0.1": {
+			"description": "WSGI utility library for Python.",
+			"author": "Pallets",
+			"license": "BSD-3-Clause",
+			"published_at": "2023-10-02",
+			"direct_deps": [
+				"markupsafe==2.1.3"
+			]
+		}
+	},
+	"jinja2": {
+		"3.0.3": {
+			"description": "Template engine for Python.",
+			"author": "Pallets",
+			"license": "BSD-3-Clause",
+			"published_at": "2022-02-17",
+			"direct_deps": [
+				"markupsafe==2.0.0"
+			]
+		},
+		"3.1.2": {
+			"description": "Template engine for Python.",
+			"author": "Pallets",
+			"license": "BSD-3-Clause",
+			"published_at": "2023-04-24",
+			"direct_deps": [
+				"markupsafe==2.1.3"
+			]
+		}
+	},
+	"markupsafe": {
+		"2.0.0": {
+			"description": "Safe string handling for Markup contexts.",
+			"author": "Pallets",
+			"license": "BSD-3-Clause",
+			"published_at": "2021-05-11",
+			"direct_deps": []
+		},
+		"2.1.3": {
+			"description": "Safe string handling for Markup contexts.",
+			"author": "Pallets",
+			"license": "BSD-3-Clause",
+			"published_at": "2023-09-06",
+			"direct_deps": []
+		}
+	},
+	"click": {
+		"8.1.0": {
+			"description": "Composable command line interface toolkit.",
+			"author": "Pallets",
+			"license": "BSD-3-Clause",
+			"published_at": "2022-03-28",
+			"direct_deps": []
+		},
+		"8.1.7": {
+			"description": "Composable command line interface toolkit.",
+			"author": "Pallets",
+			"license": "BSD-3-Clause",
+			"published_at": "2023-08-17",
+			"direct_deps": []
+		}
+	},
+	"itsdangerous": {
+		"2.1.2": {
+			"description": "Safely pass data to untrusted environments.",
+			"author": "Pallets",
+			"license": "BSD-3-Clause",
+			"published_at": "2022-03-24",
+			"direct_deps": []
+		}
+	},
+	"sqlalchemy": {
+		"1.4.41": {
+			"description": "Database toolkit and ORM for Python.",
+			"author": "SQLAlchemy authors",
+			"license": "MIT",
+			"published_at": "2022-09-06",
+			"direct_deps": [
+				"greenlet==1.1.2"
+			]
+		},
+		"2.0.25": {
+			"description": "Database toolkit and ORM for Python.",
+			"author": "SQLAlchemy authors",
+			"license": "MIT",
+			"published_at": "2024-01-05",
+			"direct_deps": [
+				"greenlet==3.0.1"
+			]
+		}
+	},
+	"greenlet": {
+		"1.1.2": {
+			"description": "Lightweight in-process concurrent programming.",
+			"author": "Greenlet contributors",
+			"license": "MIT",
+			"published_at": "2021-10-07",
+			"direct_deps": []
+		},
+		"3.0.1": {
+			"description": "Lightweight in-process concurrent programming.",
+			"author": "Greenlet contributors",
+			"license": "MIT",
+			"published_at": "2023-10-29",
+			"direct_deps": []
+		}
+	},
+	"pydantic": {
+		"1.10.0": {
+			"description": "Data validation and settings management using type hints.",
+			"author": "Samuel Colvin",
+			"license": "MIT",
+			"published_at": "2022-08-30",
+			"direct_deps": [
+				"typing-extensions==4.4.0"
+			]
+		},
+		"2.7.0": {
+			"description": "Data validation and settings management using type hints.",
+			"author": "Pydantic maintainers",
+			"license": "MIT",
+			"published_at": "2024-04-01",
+			"direct_deps": [
+				"typing-extensions==4.10.0"
+			]
+		}
+	},
+	"typing-extensions": {
+		"4.4.0": {
+			"description": "Backported typing features for Python.",
+			"author": "Python typing contributors",
+			"license": "PSF-2.0",
+			"published_at": "2022-09-26",
+			"direct_deps": []
+		},
+		"4.10.0": {
+			"description": "Backported typing features for Python.",
+			"author": "Python typing contributors",
+			"license": "PSF-2.0",
+			"published_at": "2024-02-14",
+			"direct_deps": []
+		}
+	},
+	"fastapi": {
+		"0.104.0": {
+			"description": "Fast web framework for building APIs with Python.",
+			"author": "Sebastian Ramirez",
+			"license": "MIT",
+			"published_at": "2023-10-01",
+			"direct_deps": [
+				"pydantic==2.7.0",
+				"starlette==0.27.0"
+			]
+		}
+	},
+	"uvicorn": {
+		"0.24.0": {
+			"description": "ASGI server implementation for Python.",
+			"author": "Encode",
+			"license": "BSD-3-Clause",
+			"published_at": "2023-11-04",
+			"direct_deps": [
+				"click==8.1.7",
+				"h11==0.14.0"
+			]
+		}
+	},
+	"starlette": {
+		"0.27.0": {
+			"description": "The little ASGI framework that shines.",
+			"author": "Encode",
+			"license": "BSD-3-Clause",
+			"published_at": "2023-06-29",
+			"direct_deps": [
+				"anyio==3.7.1"
+			]
+		}
+	},
+	"anyio": {
+		"3.7.1": {
+			"description": "High-level compatibility layer for multiple async event loops.",
+			"author": "AnyIO maintainers",
+			"license": "MIT",
+			"published_at": "2023-07-10",
+			"direct_deps": [
+				"idna==3.4",
+				"sniffio==1.3.0"
+			]
+		}
+	},
+	"sniffio": {
+		"1.3.0": {
+			"description": "Sniff out which async library your code is running under.",
+			"author": "sniffio maintainers",
+			"license": "MIT",
+			"published_at": "2022-09-16",
+			"direct_deps": []
+		}
+	},
+	"h11": {
+		"0.14.0": {
+			"description": "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1.",
+			"author": "h11 contributors",
+			"license": "MIT",
+			"published_at": "2022-08-05",
+			"direct_deps": []
+		}
+	},
+	"httpx": {
+		"0.24.1": {
+			"description": "A next generation HTTP client for Python.",
+			"author": "Encode",
+			"license": "BSD-3-Clause",
+			"published_at": "2023-06-06",
+			"direct_deps": [
+				"certifi==2023.7.22",
+				"httpcore==0.17.3",
+				"idna==3.4"
+			]
+		}
+	},
+	"httpcore": {
+		"0.17.3": {
+			"description": "A minimal low-level HTTP client.",
+			"author": "Encode",
+			"license": "BSD-3-Clause",
+			"published_at": "2023-06-06",
+			"direct_deps": [
+				"h11==0.14.0"
+			]
+		}
+	},
+	"aiohttp": {
+		"3.8.1": {
+			"description": "Async HTTP client/server framework.",
+			"author": "aiohttp team",
+			"license": "Apache-2.0",
+			"published_at": "2022-01-26",
+			"direct_deps": [
+				"aiosignal==1.3.1",
+				"attrs==23.1.0",
+				"yarl==1.9.2"
+			]
+		},
+		"3.9.3": {
+			"description": "Async HTTP client/server framework.",
+			"author": "aiohttp team",
+			"license": "Apache-2.0",
+			"published_at": "2024-01-08",
+			"direct_deps": [
+				"aiosignal==1.3.1",
+				"attrs==23.2.0",
+				"yarl==1.9.4"
+			]
+		}
+	},
+	"aiosignal": {
+		"1.3.1": {
+			"description": "A list of registered asynchronous callbacks.",
+			"author": "aio-libs",
+			"license": "Apache-2.0",
+			"published_at": "2023-01-17",
+			"direct_deps": []
+		}
+	},
+	"attrs": {
+		"23.1.0": {
+			"description": "Classes without boilerplate.",
+			"author": "attrs developers",
+			"license": "MIT",
+			"published_at": "2023-06-04",
+			"direct_deps": []
+		},
+		"23.2.0": {
+			"description": "Classes without boilerplate.",
+			"author": "attrs developers",
+			"license": "MIT",
+			"published_at": "2023-11-24",
+			"direct_deps": []
+		}
+	},
+	"yarl": {
+		"1.9.2": {
+			"description": "Yet another URL library.",
+			"author": "aio-libs",
+			"license": "Apache-2.0",
+			"published_at": "2023-07-09",
+			"direct_deps": []
+		},
+		"1.9.4": {
+			"description": "Yet another URL library.",
+			"author": "aio-libs",
+			"license": "Apache-2.0",
+			"published_at": "2024-02-01",
+			"direct_deps": []
+		}
+	},
+	"pillow": {
+		"9.0.0": {
+			"description": "Python Imaging Library fork.",
+			"author": "Pillow maintainers",
+			"license": "HPND",
+			"published_at": "2022-01-02",
+			"direct_deps": []
+		},
+		"9.2.0": {
+			"description": "Python Imaging Library fork.",
+			"author": "Pillow maintainers",
+			"license": "HPND",
+			"published_at": "2022-07-01",
+			"direct_deps": []
+		},
+		"10.0.0": {
+			"description": "Python Imaging Library fork.",
+			"author": "Pillow maintainers",
+			"license": "HPND",
+			"published_at": "2023-07-01",
+			"direct_deps": []
+		}
+	},
+	"cryptography": {
+		"3.4.8": {
+			"description": "Cryptographic recipes and primitives for Python.",
+			"author": "The cryptography developers",
+			"license": "Apache-2.0",
+			"published_at": "2021-08-24",
+			"direct_deps": [
+				"cffi==1.15.1"
+			]
+		},
+		"41.0.6": {
+			"description": "Cryptographic recipes and primitives for Python.",
+			"author": "The cryptography developers",
+			"license": "Apache-2.0",
+			"published_at": "2023-11-27",
+			"direct_deps": [
+				"cffi==1.16.0"
+			]
+		}
+	},
+	"cffi": {
+		"1.15.1": {
+			"description": "Foreign Function Interface for Python.",
+			"author": "Armin Rigo",
+			"license": "MIT",
+			"published_at": "2022-01-15",
+			"direct_deps": [
+				"pycparser==2.21"
+			]
+		},
+		"1.16.0": {
+			"description": "Foreign Function Interface for Python.",
+			"author": "Armin Rigo",
+			"license": "MIT",
+			"published_at": "2023-09-28",
+			"direct_deps": [
+				"pycparser==2.21"
+			]
+		}
+	},
+	"pycparser": {
+		"2.21": {
+			"description": "C parser in pure Python.",
+			"author": "Eli Bendersky",
+			"license": "BSD-3-Clause",
+			"published_at": "2021-12-01",
+			"direct_deps": []
+		}
+	},
+	"paramiko": {
+		"2.11.0": {
+			"description": "SSH2 protocol library.",
+			"author": "Jeff Forcier",
+			"license": "LGPL-2.1",
+			"published_at": "2022-06-27",
+			"direct_deps": [
+				"cryptography==3.4.8",
+				"pynacl==1.5.0"
+			]
+		},
+		"3.4.0": {
+			"description": "SSH2 protocol library.",
+			"author": "Jeff Forcier",
+			"license": "LGPL-2.1",
+			"published_at": "2023-12-18",
+			"direct_deps": [
+				"cryptography==41.0.6",
+				"pynacl==1.5.0"
+			]
+		}
+	},
+	"pynacl": {
+		"1.5.0": {
+			"description": "Python binding to the Networking and Cryptography library.",
+			"author": "PyNaCl maintainers",
+			"license": "Apache-2.0",
+			"published_at": "2022-06-22",
+			"direct_deps": [
+				"cffi==1.15.1"
+			]
+		}
+	},
+	"boto3": {
+		"1.26.0": {
+			"description": "AWS SDK for Python.",
+			"author": "Amazon Web Services",
+			"license": "Apache-2.0",
+			"published_at": "2022-11-18",
+			"direct_deps": [
+				"botocore==1.29.0",
+				"jmespath==1.0.1",
+				"s3transfer==0.6.0"
+			]
+		},
+		"1.34.0": {
+			"description": "AWS SDK for Python.",
+			"author": "Amazon Web Services",
+			"license": "Apache-2.0",
+			"published_at": "2024-01-02",
+			"direct_deps": [
+				"botocore==1.34.0",
+				"jmespath==1.0.1",
+				"s3transfer==0.10.0"
+			]
+		}
+	},
+	"botocore": {
+		"1.29.0": {
+			"description": "Low-level core functionality for boto3.",
+			"author": "Amazon Web Services",
+			"license": "Apache-2.0",
+			"published_at": "2022-11-18",
+			"direct_deps": [
+				"urllib3==1.26.12",
+				"python-dateutil==2.8.2"
+			]
+		},
+		"1.34.0": {
+			"description": "Low-level core functionality for boto3.",
+			"author": "Amazon Web Services",
+			"license": "Apache-2.0",
+			"published_at": "2024-01-02",
+			"direct_deps": [
+				"urllib3==2.0.4",
+				"python-dateutil==2.9.0"
+			]
+		}
+	},
+	"jmespath": {
+		"1.0.1": {
+			"description": "JMESPath query language for JSON.",
+			"author": "jmespath maintainers",
+			"license": "MIT",
+			"published_at": "2022-09-10",
+			"direct_deps": []
+		}
+	},
+	"s3transfer": {
+		"0.6.0": {
+			"description": "Transfer manager for AWS S3.",
+			"author": "Amazon Web Services",
+			"license": "Apache-2.0",
+			"published_at": "2022-11-18",
+			"direct_deps": [
+				"botocore==1.29.0"
+			]
+		},
+		"0.10.0": {
+			"description": "Transfer manager for AWS S3.",
+			"author": "Amazon Web Services",
+			"license": "Apache-2.0",
+			"published_at": "2024-01-02",
+			"direct_deps": [
+				"botocore==1.34.0"
+			]
+		}
+	},
+	"setuptools": {
+		"65.5.0": {
+			"description": "Library designed to facilitate packaging Python projects.",
+			"author": "Python Packaging Authority",
+			"license": "MIT",
+			"published_at": "2022-10-10",
+			"direct_deps": []
+		},
+		"65.5.1": {
+			"description": "Library designed to facilitate packaging Python projects.",
+			"author": "Python Packaging Authority",
+			"license": "MIT",
+			"published_at": "2022-10-21",
+			"direct_deps": []
+		}
+	},
+	"pip": {
+		"22.0.0": {
+			"description": "Package installer for Python.",
+			"author": "Python Packaging Authority",
+			"license": "MIT",
+			"published_at": "2022-01-30",
+			"direct_deps": [
+				"setuptools==65.5.0",
+				"wheel==0.38.4"
+			]
+		},
+		"23.3.1": {
+			"description": "Package installer for Python.",
+			"author": "Python Packaging Authority",
+			"license": "MIT",
+			"published_at": "2023-10-21",
+			"direct_deps": [
+				"setuptools==65.5.1",
+				"wheel==0.42.0"
+			]
+		}
+	},
+	"wheel": {
+		"0.38.4": {
+			"description": "Built-package format for Python.",
+			"author": "wheel maintainers",
+			"license": "MIT",
+			"published_at": "2022-12-01",
+			"direct_deps": []
+		},
+		"0.42.0": {
+			"description": "Built-package format for Python.",
+			"author": "wheel maintainers",
+			"license": "MIT",
+			"published_at": "2023-11-27",
+			"direct_deps": []
+		}
+	},
+	"numpy": {
+		"1.23.0": {
+			"description": "Array processing for numbers, strings, records, and objects.",
+			"author": "NumPy developers",
+			"license": "BSD-3-Clause",
+			"published_at": "2022-06-22",
+			"direct_deps": []
+		},
+		"1.26.4": {
+			"description": "Array processing for numbers, strings, records, and objects.",
+			"author": "NumPy developers",
+			"license": "BSD-3-Clause",
+			"published_at": "2024-02-05",
+			"direct_deps": []
+		}
+	},
+	"pandas": {
+		"1.5.0": {
+			"description": "Powerful data structures for data analysis and time series.",
+			"author": "The Pandas Development Team",
+			"license": "BSD-3-Clause",
+			"published_at": "2022-09-19",
+			"direct_deps": [
+				"numpy==1.23.0",
+				"python-dateutil==2.8.2",
+				"pytz==2023.3"
+			]
+		},
+		"2.2.1": {
+			"description": "Powerful data structures for data analysis and time series.",
+			"author": "The Pandas Development Team",
+			"license": "BSD-3-Clause",
+			"published_at": "2024-02-22",
+			"direct_deps": [
+				"numpy==1.26.4",
+				"python-dateutil==2.9.0",
+				"pytz==2024.1"
+			]
+		}
+	},
+	"python-dateutil": {
+		"2.8.2": {
+			"description": "Extensions to the standard Python datetime module.",
+			"author": "dateutil contributors",
+			"license": "BSD-3-Clause",
+			"published_at": "2021-08-30",
+			"direct_deps": [
+				"six==1.16.0"
+			]
+		},
+		"2.9.0": {
+			"description": "Extensions to the standard Python datetime module.",
+			"author": "dateutil contributors",
+			"license": "BSD-3-Clause",
+			"published_at": "2024-01-20",
+			"direct_deps": [
+				"six==1.16.0"
+			]
+		}
+	},
+	"six": {
+		"1.16.0": {
+			"description": "Python 2 and 3 compatibility utilities.",
+			"author": "Benjamin Peterson",
+			"license": "MIT",
+			"published_at": "2021-01-01",
+			"direct_deps": []
+		}
+	},
+	"pytz": {
+		"2023.3": {
+			"description": "World timezone definitions, modern and historical.",
+			"author": "Stuart Bishop",
+			"license": "MIT",
+			"published_at": "2023-03-26",
+			"direct_deps": []
+		},
+		"2024.1": {
+			"description": "World timezone definitions, modern and historical.",
+			"author": "Stuart Bishop",
+			"license": "MIT",
+			"published_at": "2024-02-01",
+			"direct_deps": []
+		}
+	},
+	"requests-toolbelt": {
+		"0.10.1": {
+			"description": "A utility belt for advanced users of requests.",
+			"author": "Ian Cordasco",
+			"license": "Apache-2.0",
+			"published_at": "2022-09-05",
+			"direct_deps": [
+				"requests==2.28.0"
+			]
+		},
+		"1.0.0": {
+			"description": "A utility belt for advanced users of requests.",
+			"author": "Ian Cordasco",
+			"license": "Apache-2.0",
+			"published_at": "2024-01-01",
+			"direct_deps": [
+				"requests==2.31.0"
+			]
+		}
+	},
+	"requets": {
+		"1.0.0": {
+			"description": "Fast request helper package for API workflows.",
+			"author": "Community Tools",
+			"license": "MIT",
+			"published_at": "2023-10-11",
+			"direct_deps": [
+				"requests==2.31.0"
+			]
+		}
+	},
+	"urllib4": {
+		"1.0.0": {
+			"description": "High-performance URL and socket utility package.",
+			"author": "Infra Helpers",
+			"license": "MIT",
+			"published_at": "2023-10-10",
+			"direct_deps": [
+				"urllib3==2.0.4"
+			]
+		}
+	},
+	"pydantics": {
+		"1.0.0": {
+			"description": "Data modeling helpers for rapid API development.",
+			"author": "Schema Works",
+			"license": "MIT",
+			"published_at": "2023-11-02",
+			"direct_deps": [
+				"pydantic==1.10.0"
+			]
+		}
+	}
+}

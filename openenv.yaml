@@ -1,0 +1,29 @@
+spec_version: 1
+name: supply-chain-auditor-env
+type: space
+runtime: fastapi
+app: server.app:app
+port: 7860
+description: >
+  An agent environment where an AI security engineer audits Python package
+  dependency trees for CVEs, typosquatting, and supply chain risks, then
+  generates a prioritized remediation plan.
+tags:
+  - openenv
+  - security
+  - software-supply-chain
+  - real-world
+author: G. Karthik Koundinya
+tasks:
+  - id: flat_audit
+    name: Flat Dependency Audit
+    difficulty: easy
+    max_steps: 30
+  - id: typosquat_transitive
+    name: Typosquatting + Transitive CVE Detection
+    difficulty: medium
+    max_steps: 50
+  - id: full_sbom_remediation
+    name: Full SBOM + Remediation Plan
+    difficulty: hard
+    max_steps: 100
