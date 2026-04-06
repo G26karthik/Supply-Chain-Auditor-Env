@@ -5,11 +5,11 @@ runtime: fastapi
 app: server.app:app
 port: 7860
 description: >
-  An agent environment where an AI security engineer audits Python package
-  dependency trees for CVEs, typosquatting, and supply chain risks, then
-  generates a prioritized remediation plan. Features deterministic grading,
-  realistic fixture data with real CVE IDs, and three difficulty tiers from
-  flat manifest audits to full SBOM generation with remediation planning.
+  Supply chain attacks now dominate enterprise security breaches — XZ Utils (2024),
+  Log4Shell, and SolarWinds proved that one compromised dependency can cascade into
+  millions of victims. This environment trains agents to do what human defenders do
+  daily: hunt CVEs in transitive dependency trees, detect typosquatted packages,
+  and generate minimal-upgrade remediation plans under deterministic grading.
 tags:
   - openenv
   - security

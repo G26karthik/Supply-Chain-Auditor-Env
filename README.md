@@ -14,9 +14,9 @@ tags:
 
 ## 1. Overview & Motivation
 
-Modern software supply chains depend on large and fast-moving dependency graphs. A single vulnerable or malicious package can propagate risk across thousands of projects, which makes package auditing a practical daily task for security engineers.
+In March 2024, a backdoor in XZ Utils nearly compromised SSH authentication across every major Linux distribution. Log4Shell affected 35,000+ Java packages. SolarWinds breached 18,000 organizations including US federal agencies. The common thread: software supply chain attacks that turn trusted dependencies into weapons.
 
-This environment models that real workflow as an OpenEnv-compatible benchmark. Agents inspect package metadata, detect CVEs, trace transitive dependencies, detect typosquats, generate an SBOM, and propose remediations under deterministic grading. The design is fully offline and reproducible, enabling fair evaluation over time.
+This environment puts AI agents in the seat of a supply chain security engineer — the human defender who hunts these threats daily. Agents must inspect package manifests, query CVE databases, trace transitive dependency trees to find hidden vulnerabilities, detect typosquatted package names, generate SBOMs, and propose minimal-upgrade remediation plans. Grading is fully deterministic and reproducible, enabling rigorous evaluation of agent security reasoning.
 
 ## 2. Environment Design
 
