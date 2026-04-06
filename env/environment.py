@@ -130,6 +130,7 @@ class SupplyChainEnv(Environment):
 		)
 		return observation
 
+	@property
 	def state(self) -> State:
 		"""Return deep-copy state snapshot for callers and validators."""
 
