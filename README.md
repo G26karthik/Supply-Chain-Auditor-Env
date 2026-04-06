@@ -134,16 +134,19 @@ Current workspace baseline was generated from reproducible local runs using Open
 | Full SBOM + remediation (hard) | 0.96 |
 | **Mean** | **0.84** |
 
-## 7. Hugging Face Space
+## 7. Why This Environment Matters
 
-- **Deployment URL:** [https://huggingface.co/spaces/YOUR_USERNAME/supply-chain-auditor-env](https://huggingface.co/spaces/YOUR_USERNAME/supply-chain-auditor-env)
+Supply chain attacks are the dominant security threat of this decade:
+
+- **XZ Utils (2024)**: A backdoor planted in a compression library nearly compromised SSH authentication across millions of Linux systems.
+- **Log4Shell (2021)**: A single vulnerability in Log4j affected over 35,000 Java packages and cost organizations billions in remediation.
+- **SolarWinds (2020)**: Malicious code injected into a software update pipeline compromised 18,000+ organizations including US federal agencies.
+
+This environment trains agents on the exact workflow security engineers perform daily: inspecting dependencies, identifying CVEs, tracing transitive risks, and proposing minimal remediations. Unlike toy benchmarks, this directly addresses a $10B+ annual problem.
+
+## 8. Hugging Face Space
+
+- **Deployment URL:** [https://huggingface.co/spaces/LuciferMrng/Supply-Chain-Auditor-ENV](https://huggingface.co/spaces/LuciferMrng/Supply-Chain-Auditor-ENV)
 - Space is tagged with `openenv` via README frontmatter
-- After pushing to HF Spaces, verify the Space status shows `Running`
-
-### Deployment Steps
-
-1. Create a new Space on HuggingFace with Docker SDK
-2. Push this repository to the Space
-3. Wait for the build to complete
-4. Verify `/health` endpoint returns `{"status": "healthy"}`
+- Health check: `GET /health` returns `{"status": "healthy"}`
 
