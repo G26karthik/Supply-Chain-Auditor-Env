@@ -283,7 +283,9 @@ def run_task(client: OpenAI, env: SupplyChainEnv, task_id: str) -> float:
 			)
 
 			if observation.done:
-				score = float(observation.score or 0.0)
+				# Score must be strictly between 0 and 1 per hackathon validation
+				raw_score = observation.score if observation.score is not None else 0.001
+				score = max(0.001, min(0.999, raw_score))
 				success = score > 0.5
 				break
 

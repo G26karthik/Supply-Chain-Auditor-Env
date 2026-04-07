@@ -96,7 +96,8 @@ class Observation(OpenEnvObservation):
 	sbom: Optional[list[dict[str, str]]] = None
 	message: str = ""
 	# reward and done are inherited from OpenEnvObservation
-	score: Optional[float] = Field(default=None, ge=0.0, le=1.0)
+	# Score must be strictly between 0 and 1 (open interval) per hackathon validation
+	score: Optional[float] = Field(default=None, gt=0.0, lt=1.0)
 
 
 class Reward(BaseModel):
@@ -119,7 +120,8 @@ class State(OpenEnvState):
 	sbom: Optional[list[dict[str, str]]] = None
 	cumulative_reward: float = Field(ge=0.0, le=1.0)
 	done: bool = False
-	score: Optional[float] = Field(default=None, ge=0.0, le=1.0)
+	# Score must be strictly between 0 and 1 (open interval) per hackathon validation
+	score: Optional[float] = Field(default=None, gt=0.0, lt=1.0)
 
 
 DependencyNode.model_rebuild()

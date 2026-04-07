@@ -174,6 +174,10 @@ class SupplyChainEnv(Environment):
 		score: float | None = None,
 	) -> Observation:
 		assert self._state is not None
+		# Ensure score is strictly within (0, 1) if set
+		clamped_score = None
+		if score is not None:
+			clamped_score = clamp01(score)
 		return Observation(
 			task_id=self._state.task_id,
 			step=self._state.step,
@@ -187,7 +191,7 @@ class SupplyChainEnv(Environment):
 			message=message,
 			done=self._state.done,
 			reward=reward,
-			score=score,
+			score=clamped_score,
 		)
 
 	def _validate_package_fields(self, action: Action) -> tuple[str | None, str | None, dict[str, Any] | None]:
