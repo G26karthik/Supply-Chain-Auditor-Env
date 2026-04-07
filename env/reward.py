@@ -29,9 +29,9 @@ def clamp(value: float, min_val: float = -1.0, max_val: float = 1.0) -> float:
 
 
 def clamp01(value: float) -> float:
-	"""Clamp numeric value into [0.0, 1.0]."""
+	"""Clamp numeric value to strictly within (0.0, 1.0) open interval."""
 
-	return max(0.0, min(1.0, value))
+	return max(0.001, min(0.999, value))
 
 
 @dataclass
