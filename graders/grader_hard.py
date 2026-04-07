@@ -9,8 +9,9 @@ from env.registry import PackageRegistry
 from tasks.task_hard import TASK_HARD
 
 
-def _clamp01(value: float) -> float:
-	return max(0.0, min(1.0, value))
+def _clamp_strict(value: float) -> float:
+	"""Clamp to strictly between 0 and 1 (open interval) as required by hackathon."""
+	return max(0.001, min(0.999, value))
 
 
 class HardGrader:
@@ -72,11 +73,11 @@ class HardGrader:
 		precision = found_count / precision_denominator if precision_denominator > 0 else 0.0
 		recall = found_count / len(self.gold_cve_pairs) if self.gold_cve_pairs else 0.0
 		cve_f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
-		cve_coverage = _clamp01(cve_f1)
+		cve_coverage = _clamp_strict(cve_f1)
 
 		sbom_pairs = self._extract_sbom_pairs(state.sbom)
 		sbom_intersection = sbom_pairs.intersection(self.gold_closure)
-		sbom_completeness = _clamp01(
+		sbom_completeness = _clamp_strict(
 			len(sbom_intersection) / len(self.gold_closure) if self.gold_closure else 0.0
 		)
 
@@ -99,19 +100,19 @@ class HardGrader:
 		coverage = len(covered_packages) / len(required_packages) if required_packages else 1.0
 		total_remediations = valid_entries + invalid_entries
 		quality = valid_entries / total_remediations if total_remediations > 0 else 0.0
-		remediation_validity = _clamp01(0.7 * coverage + 0.3 * quality)
+		remediation_validity = _clamp_strict(0.7 * coverage + 0.3 * quality)
 
 		actual_upgrades = len({entry.package_name for entry in state.remediations})
 		# Parsimony only counts if at least one valid remediation is provided
 		if actual_upgrades == 0:
-			parsimony = 0.0
+			parsimony = 0.001  # Ensure strictly > 0
 		elif actual_upgrades <= self.minimum_upgrades:
-			parsimony = 1.0
+			parsimony = 0.999  # Ensure strictly < 1
 		else:
 			extra_upgrades = actual_upgrades - self.minimum_upgrades
-			parsimony = _clamp01(1.0 - (0.2 * extra_upgrades))
+			parsimony = _clamp_strict(1.0 - (0.2 * extra_upgrades))
 
-		score = _clamp01(
+		score = _clamp_strict(
 			0.35 * cve_coverage
 			+ 0.20 * sbom_completeness
 			+ 0.30 * remediation_validity

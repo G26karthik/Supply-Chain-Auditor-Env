@@ -8,8 +8,9 @@ from env.models import State
 from tasks.task_easy import TASK_EASY
 
 
-def _clamp01(value: float) -> float:
-	return max(0.0, min(1.0, value))
+def _clamp_strict(value: float) -> float:
+	"""Clamp to strictly between 0 and 1 (open interval) as required by hackathon."""
+	return max(0.001, min(0.999, value))
 
 
 class EasyGrader:
@@ -35,7 +36,7 @@ class EasyGrader:
 		recall = found_count / len(self.gold_pairs) if self.gold_pairs else 0.0
 		f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
 
-		score = _clamp01(f1)
+		score = _clamp_strict(f1)
 		breakdown = {
 			"found": sorted(found),
 			"false_positives": false_positives,

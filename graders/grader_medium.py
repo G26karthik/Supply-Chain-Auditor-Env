@@ -8,8 +8,9 @@ from env.models import State
 from tasks.task_medium import TASK_MEDIUM
 
 
-def _clamp01(value: float) -> float:
-	return max(0.0, min(1.0, value))
+def _clamp_strict(value: float) -> float:
+	"""Clamp to strictly between 0 and 1 (open interval) as required by hackathon."""
+	return max(0.001, min(0.999, value))
 
 
 class MediumGrader:
@@ -37,7 +38,7 @@ class MediumGrader:
 		fp_penalty = min(false_positives * 0.1, 0.3)
 
 		raw_score = (typosquat_score * 0.5 + transitive_score * 0.5) - fp_penalty
-		score = _clamp01(raw_score)
+		score = _clamp_strict(raw_score)
 		breakdown = {
 			"typosquat_score": typosquat_score,
 			"transitive_score": transitive_score,
